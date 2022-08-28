@@ -1,0 +1,55 @@
+PASOS:
+
+2. estructura de la solucion
+
+    Controllers
+    Data
+    Data/Interfaces
+    Dtos
+    Helpers
+    Mapper
+    Models
+Services
+Services/Interfaces
+
+3.- Agrega un Modelos
+
+4. Agregar Nugets
+    Packages
+
+        dotnet add package Microsoft.EntityFrameworkCore --version 3.1
+        dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+        dotnet add package Microsoft.EntityFrameworkCore.Design --version 3.1
+        dotnet add package Pomelo.EntityFrameworkCore.MySql --version 3.1
+
+5. Agregar la conexion a bd en el archivo.json
+
+6. Dar de alta la cadena de conexion en startup.cs
+
+7. Para agregar LazyLoad
+dotnet add package Microsoft.EntityFrameworkCore.Proxies --version 3.1
+
+8. Actualizar dotnet
+dotnet tool update --global dotnet-ef
+
+Si la EF tool no esta instalada
+dotnet tool install --global dotnet-ef
+
+dotnet ef migrations add Initialcreate
+dotnet ef database update
+
+
+-- remove
+dotnet ef migrations remove
+
+
+Creacion de nuestros REPOSITORY para interacturar con nuestra base de datos ( Patron de diseño Repository)
+
+
+
+linqtodb
+linqtodb.Oracle.Managed
+linqtodb.t4models -> script que tiene una cadena de conexion a la base y se trae toda la data de la base de datos al proyecto. --> plantilla para conexion 
+
+linq2db.AspNet
+
